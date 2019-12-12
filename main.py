@@ -1,10 +1,3 @@
-from configLoader import fileLoader
+from inGame import Yuumi
 
-cfg = fileLoader("config.cfg")
-
-cfg.readConfig()
-
-cfgDict = cfg.cfg
-print(cfgDict)
-
-cfg.close()
+yuumi = Yuumi()
