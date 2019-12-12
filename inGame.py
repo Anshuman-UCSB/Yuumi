@@ -29,13 +29,19 @@ class Yuumi:
         hudImg_np = np.array(hudImg)
         hudFrame = cv2.cvtColor(hudImg_np, cv2.COLOR_BGR2RGB)
 
+        champImg = ImageGrab.grab(cfgData[8])
+        champImg_np = np.array(champImg)
+        champFrame = cv2.cvtColor(champImg_np, cv2.COLOR_BGR2RGB)
+
         cv2.imshow("f1", mapFrame)
         cv2.imshow("f2", hudFrame)
+        cv2.imshow("f3", champFrame)
         #print(pyautogui.position())
-        
+
         if init:
             cv2.moveWindow("f1",cfgData[2],cfgData[3])
             cv2.moveWindow("f2",cfgData[4],cfgData[5])
+            cv2.moveWindow("f3",cfgData[6],cfgData[7])
             init = False
 
         if cv2.waitKey(1) == 27:

@@ -28,6 +28,11 @@ class fileLoader():
         self.cfg.append(self.cfgDict["f1Y"])
         self.cfg.append(self.cfgDict["f2X"])
         self.cfg.append(self.cfgDict["f2Y"])
+        self.cfg.append(self.cfgDict["f3X"])
+        self.cfg.append(self.cfgDict["f3Y"])
+
+        champBox = (self.cfgDict["champsX"],self.cfgDict["champsY"],self.cfgDict["champsW"],self.cfgDict["champsH"])
+        self.cfg.append(champBox)
 
     def close(self):
         self.f.close()
