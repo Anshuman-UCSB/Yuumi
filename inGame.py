@@ -4,6 +4,7 @@ class Yuumi:
     import cv2
     from PIL import ImageGrab
     import pyautogui
+    from imageManipulation import imageRec
 
     cfg = fileLoader("config.cfg")
 
@@ -13,6 +14,8 @@ class Yuumi:
     print(cfgData)
 
     cfg.close()
+
+    imgrec = imageRec()
 
     # variables:
     # cfg is object
@@ -37,6 +40,7 @@ class Yuumi:
         cv2.imshow("f2", hudFrame)
         cv2.imshow("f3", champFrame)
         #print(pyautogui.position())
+        imgrec.getHealthValue(champFrame, cfgData[9][0], cfgData[9][1], cfgData[9][2])
 
         if init:
             cv2.moveWindow("f1",cfgData[2],cfgData[3])
