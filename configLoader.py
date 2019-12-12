@@ -33,7 +33,7 @@ class fileLoader():
 
         champBox = (self.cfgDict["champsX"],self.cfgDict["champsY"],self.cfgDict["champsW"],self.cfgDict["champsH"])
         self.cfg.append(champBox)
-        self.cfg.append([self.cfgDict["champPortraitX1"],self.cfgDict["champPortraitX2"], self.cfgDict["champPortraitY"]])
+        self.cfg.append([self.cfgDict["champPortraitX1"],self.cfgDict["champPortraitX2"], self.cfgDict["champPortraitY1"], self.cfgDict["champPortraitY2"]])
 
     def close(self):
         self.f.close()

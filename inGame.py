@@ -40,7 +40,7 @@ class Yuumi:
         cv2.imshow("f2", hudFrame)
         cv2.imshow("f3", champFrame)
         #print(pyautogui.position())
-        imgrec.getHealthValue(champFrame, cfgData[9][0], cfgData[9][1], cfgData[9][2])
+        imgrec.getHealthValue(cfgData[9][0], cfgData[9][1], cfgData[9][2], cfgData[9][3])
 
         if init:
             cv2.moveWindow("f1",cfgData[2],cfgData[3])
